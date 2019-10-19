@@ -36,6 +36,10 @@
     td {
       border: 1px solid black;
     }
+    h2 {
+      font-family: sans-serif;
+      color: #3366ff
+    }
   </style>
   <head>
     <script src="//cdn.jsdelivr.net/npm/pouchdb@7.1.1/dist/pouchdb.min.js"></script>
@@ -70,13 +74,16 @@
       </p>
         <input
           name="action"
+          id="action"
           type="text"
           max
           length="100"
           placeholder="action completed"
           aria-labelledby="add-my-action!"
         />
-        <button type="submit" id="add-my-action" onClick="addTodo()">add my action</button>
+        <button type="submit" id="add-my-action" onclick="addTodo()">add my action</button>
+      <br/>
+      <textarea id="completedActions" rows="20" style="position:relative; top:30px"></textarea>
       <section class="action">
         <ul id="action"></ul>
       </section>
@@ -94,11 +101,11 @@
     <br/>
     <br/>
     <br/>
-    <p>
+    <h2>
       <center>
       Here are some extra resources to help you on your motivational journey 
       </center>
-    </p>
+    </h2>
   <p>
         Need some music to jump start your motivation? Try some music to help.
         <a
@@ -123,6 +130,14 @@
         volunteering near you 🚗
       </a>
     </p>
+    <p>
+      Ready to get out in the world with your friends? Try this to any event near you.
+      <a
+         href="https://losangeles.eventful.com/events"
+         >
+        concerts and more near you 🥳
+      </a>
+    </p>
     
 
     
@@ -130,5 +145,7 @@
   </body>
   <footer>
     A website created for ADAHACKS II 2019
+    <br/>
+    By team Connect 
   </footer>
 </html>

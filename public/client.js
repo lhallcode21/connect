@@ -6,8 +6,8 @@ function addTodo() {
   var todo = {
     user: document.getElementById("user").value,
     _id: new Date().toISOString(),
-    title: document.getElementById("action").value,
-    completed: true
+    task: document.getElementById("action").value,
+    completed: true 
   };
   db.put(todo, function callback(err, result) {
     if (!err) {
@@ -19,8 +19,24 @@ function addTodo() {
 function showTodos() {
   db.allDocs({ include_docs: true, descending: true }, function(err, doc) {
     console.log('loaded from db', doc.rows);
-  });
+    for (var index = 0; index < doc.rows.length; index ++) {
+      if(doc.rows[index].doc.task !== undefined) {
+      
+    
+    document.getElementById("completedActions").value =
+      document.getElementById("completedActions").value + '\n' + doc.rows[index].doc.task;
+        console.log('loaded from db', doc.rows[index]);
+      }
+      
+  }
+});
 }
+/*
+function showTodos() {
+  db.allDocs({ include_docs: true, descending: true }, function(err, doc) {
+    console.log('loaded from db', doc.rows);
+  });
+}*/
 
 db.changes({
   since: "now",
