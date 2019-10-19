@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+
+body {
+background-color: #ADD8E6;
+}
+h1 {
+  color: #FC766AFF;
+  font-family: sans-serif;
+}
+p {font-family: sans-serif;
+color: #184A45FF}
+
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+  <head>
+    <script src="//cdn.jsdelivr.net/npm/pouchdb@7.1.1/dist/pouchdb.min.js"></script>
+    <!-- import the webpage's client-side javascript file -->
+    <script src="/client.js" defer></script>
+  </head>
+  <body>
+    <center>
+      <h1> Adding an Action </h1>
+    </center>
+  
+    <p>
+      Need some extra motivation? Try some music to help.
+      <a href="https://open.spotify.com/playlist/2AOW8R0mu8X8AgxI0SVvQU?si=A_KJe6-jSvCAj8XmkYTv5A"> motivational music playlist </a>
+    </p>
+    <form>
+      <input
+      name = "action"
+      type = "text"
+      max length = "100"
+      placeholder="action completed"
+      aria-labelledby= "add-my-action!"
+      />
+      <button type="submit" id="add-my-action">add my action</button>
+    </form>
+      <form>
+<button type="button" value="Put Your Text Here" onclick="window.location.href='http://www.hyperlinkcode.com/button-links.php'" />
+</form>
+    <section class="action">
+        <ul id="action"></ul>
+      </section>
+
+    <input type="text" id="test">
+<input type="button" value="enter your score" onclick="z()"><span id="err"></span>
+  </body>
+</html>

@@ -1,75 +1,134 @@
 <!DOCTYPE html>
 <html>
-<script src="js/login.js"></script>
+  <style>
+    body {
+      background: #ADD8E6;
+      background: -moz-linear-gradient(
+        top,
+        #ADD8E6 0%,
+        #718EA4 50%,
+        #FC766AFF 100%
+      );
+      background: -webkit-linear-gradient(
+        top,
+        #ADD8E6 0%,
+        #718EA4 50%,
+        #FC766AFF 100%
+      );
+      background: linear-gradient(
+        to bottom,
+        #ADD8E6 0%,
+        #718EA4 50%,
+        #FC766AFF 100%
+      );
+    }
+    h1 {
+      color: #FC766AFF;
+      font-family: sans-serif;
+    }
+    p {
+      font-family: sans-serif;
+      color: #184A45FF;
+    }
 
-<style>
-
-body {
-background-color: #ADD8E6;
-}
-h1 {
-  color: #FC766AFF;
-  font-family: sans-serif;
-}
-p {font-family: sans-serif;
-color: #184A45FF}
-
-table, th, td {
-  border: 1px solid black;
-}
-</style>
+    table,
+    th,
+    td {
+      border: 1px solid black;
+    }
+  </style>
+  <head>
+    <script src="//cdn.jsdelivr.net/npm/pouchdb@7.1.1/dist/pouchdb.min.js"></script>
+    <!-- import the webpage's client-side javascript file -->
+    <script src="/client.js" defer></script>
+  </head>
   <body>
     <center>
-      <h1> Connect </h1>
-      <img src="image.png" style="width:300px;height:300px;">
+      <h1>Connect</h1>
+      <!--
+      <img src = "hand.png" style="width:300px;height:300px;">-->
+      <h4>A personal motivator tool</h4>
     </center>
-    <p>
-      Welcome to your personal motivator! Our goal is to help you <u>connect</u> with yourself, mind, and community. Along the way you can compare your score with your friends!
-      </p>
-    <h1> Your current score = "enter your score"
     <center>
-    <h3> Your Friends </h3>
-    <table>
-      <tr>
-        <th>Name</th>
-        <th>Points</th>
-        <th>Point_difference</th>
-      </tr>
-      <tr>
-        <td>John Williams</td>
-        <td>1200</td>
-        <td>300</td>
-      </tr>
-      <tr>
-        <td>Jessica Sweet</td>
-        <td>1400</td>
-        <td>100</td>
-      <tr>
-        <td>Kara Lee</td>
-        <td>1700</td>
-        <td>-200</td>
-    </table>
-    <p>
-      Need some extra motivation? Try some music to help.
-      <a href="https://open.spotify.com/playlist/2AOW8R0mu8X8AgxI0SVvQU?si=A_KJe6-jSvCAj8XmkYTv5A"> motivational music playlist </a>
-    </p>
-    <form>
-      <input
-      name = "action"
-      type = "text"
-      max length = "100"
-      placeholder="action completed"
-      aria-labelledby= "add-my-action!"
+      <img
+        src="https://www.pnglot.com/pngfile/detail/12-124694_handshake-png-icon-handshake-clipart.png"
+        style="width:300px;height:200px;"
       />
-      <button type="submit" id="add-my-action">add my action</button>
-    </form>
-    <section class="action">
+<input
+          name="user"
+       id="user"
+          type="text"
+          max
+          length="100"
+          placeholder="username"
+          aria-labelledby="add-my-action!"
+        />
+      <p>
+        Welcome to your personal motivator! Our goal is to help you
+        <u>connect</u> with yourself, mind, and community. Along the way you can
+        compare your score with your friends!
+      </p>
+        <input
+          name="action"
+          type="text"
+          max
+          length="100"
+          placeholder="action completed"
+          aria-labelledby="add-my-action!"
+        />
+        <button type="submit" id="add-my-action" onClick="addTodo()">add my action</button>
+      <section class="action">
         <ul id="action"></ul>
       </section>
-    </main>
+      
+      <form>
+      <p>
+        <ul>
+          <a href="addaction.html">Add an Action</a>
+   
+      </ul>
+      </p>
+    </form>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <p>
+      <center>
+      Here are some extra resources to help you on your motivational journey 
+      </center>
+    </p>
+  <p>
+        Need some music to jump start your motivation? Try some music to help.
+        <a
+          href="https://open.spotify.com/playlist/2AOW8R0mu8X8AgxI0SVvQU?si=A_KJe6-jSvCAj8XmkYTv5A"
+        >
+          motivational music playlist 🎶
+        </a>
+      </p>
+    <p>
+      Need to take a break from the stress of everything? Try a meditation to help. 
+      <a 
+         href="https://www.youtube.com/watch?v=ZssjZnsN4Gg"
+         >
+        motivational meditation ☀️
+      </a>
+    </p>
+    <p>
+      Ready to get involved in your greater community? Try to find a volunteer opportunity. 
+      <a
+        href="https://www.volunteermatch.org"
+         >
+        volunteering near you 🚗
+      </a>
+    </p>
+    
 
-
-    <input type="text" id="test">
-<input type="button" value="enter your score" onclick="z()"><span id="err"></span>
+    
+    </center>
   </body>
+  <footer>
+    A website created for ADAHACKS II 2019
+  </footer>
 </html>
