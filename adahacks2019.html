@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<script src="js/login.js"></script>
+
+<style>
+
+body {
+background-color: #ADD8E6;
+}
+h1 {
+  color: #FC766AFF;
+  font-family: sans-serif;
+}
+p {font-family: sans-serif;
+color: #184A45FF}
+
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+  <body>
+    <center>
+      <h1> Connect </h1>
+      <img src="image.png" style="width:300px;height:300px;">
+    </center>
+    <p>
+      Welcome to your personal motivator! Our goal is to help you <u>connect</u> with yourself, mind, and community. Along the way you can compare your score with your friends!
+      </p>
+    <h1> Your current score = "enter your score"
+    <center>
+    <h3> Your Friends </h3>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Points</th>
+        <th>Point_difference</th>
+      </tr>
+      <tr>
+        <td>John Williams</td>
+        <td>1200</td>
+        <td>300</td>
+      </tr>
+      <tr>
+        <td>Jessica Sweet</td>
+        <td>1400</td>
+        <td>100</td>
+      <tr>
+        <td>Kara Lee</td>
+        <td>1700</td>
+        <td>-200</td>
+    </table>
+    <p>
+      Need some extra motivation? Try some music to help.
+      <a href="https://open.spotify.com/playlist/2AOW8R0mu8X8AgxI0SVvQU?si=A_KJe6-jSvCAj8XmkYTv5A"> motivational music playlist </a>
+    </p>
+    <form>
+      <input
+      name = "action"
+      type = "text"
+      max length = "100"
+      placeholder="action completed"
+      aria-labelledby= "add-my-action!"
+      />
+      <button type="submit" id="add-my-action">add my action</button>
+    </form>
+    <section class="action">
+        <ul id="action"></ul>
+      </section>
+    </main>
+
+
+    <input type="text" id="test">
+<input type="button" value="enter your score" onclick="z()"><span id="err"></span>
+  </body>
+</html>
