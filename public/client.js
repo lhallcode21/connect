@@ -29,12 +29,18 @@ function addTodo() {
 
 function showTodos() {
   const user = document.getElementById("user").value;
+  var numActions = 0;
   for (var index = document.getElementById("others").rows.length;
       index > 0; index--) {
     document.getElementById("others").deleteRow(index-1);
   }
+  
+  for (var index = document.getElementById("actions").rows.length;
+      index > 0; index--) {
+    document.getElementById("actions").deleteRow(index-1);
+  }
+  
   var pointsmap = {};
-  document.getElementById("completedActions").value = "";
   db.allDocs({ include_docs: true, descending: true }, function(err, doc) {
     console.log("loaded from db", doc.rows);
     for (var index = 0; index < doc.rows.length; index++) {
@@ -47,9 +53,8 @@ function showTodos() {
         }
       }
       if (doc.rows[index].doc.user === user) {
-        document.getElementById("completedActions").value =
-          document.getElementById("completedActions").value +
-          "\n" +
+        var userRow = document.getElementById("actions").insertRow(numActions); 
+        userRow.insertCell(0).innerHTML = 
           doc.rows[index].doc.task;
         console.log("loaded from db", doc.rows[index]);
       }
@@ -62,7 +67,7 @@ function showTodos() {
       if (key !== user) {
         var row = document.getElementById("others").insertRow(othersIndex);
       row.insertCell(0).innerHTML =
-          "Points " + key + " has " + pointsmap[key];
+           key + " has " + pointsmap[key] + " points ";
       }
     });
   });

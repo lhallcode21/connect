@@ -38,7 +38,7 @@
     }
     h2 {
       font-family: sans-serif;
-      color: #3366ff
+      color: #3366ff;
     }
   </style>
   <head>
@@ -58,60 +58,61 @@
         src="https://www.pnglot.com/pngfile/detail/12-124694_handshake-png-icon-handshake-clipart.png"
         style="width:300px;height:200px;"
       />
-<input
-          name="user"
-       id="user"
-          type="text"
-          max
-          length="100"
-          placeholder="username"
-          aria-labelledby="add-my-action!"
-       onchange="showTodos()"
-        />
+      <input
+        name="user"
+        id="user"
+        type="text"
+        max
+        length="100"
+        placeholder="username"
+        aria-labelledby="add-my-action!"
+        onchange="showTodos()"
+      />
       <p>
         Welcome to your personal motivator! Our goal is to help you
         <u>connect</u> with yourself, mind, and community. Along the way you can
         compare your score with your friends!
       </p>
-        <input
-          name="action"
-          id="action"
-          type="text"
-          max
-          length="100"
-          placeholder="action completed"
-          aria-labelledby="add-my-action!"
-        />
-        <button type="submit" id="add-my-action" onclick="addTodo()">add my action</button>
-      <br/>
-      <h2 id="errors">
-        
-      </h2>
-      <h2 id="points">
-        
-      </h2>
-      <table id="others">
-        
-      </table>
-      <textarea id="completedActions" rows="15" style="position:relative; top:30px"></textarea>
+      <input
+        name="action"
+        id="action"
+        type="text"
+        max
+        length="100"
+        placeholder="action completed"
+        aria-labelledby="add-my-action!"
+      />
+      <button type="submit" id="add-my-action" onclick="addTodo()">
+        add my action
+      </button>
       <br />
-      
+      <h2 id="errors"></h2>
+      <h2 id="points"></h2>
+
+      <h2>
+        Completed tasks
+      </h2>
+      <table id="actions"></table>
+      <h2>
+        Your friends' status
+      </h2>
+      <table id="others"></table>
+
       <section class="action">
-        <ul id="action"></ul>
+        <ul id="oldaction"></ul>
       </section>
-      
-      
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <h2>
-      <center>
-      Here are some extra resources to help you on your motivational journey 
-      </center>
-    </h2>
-  <p>
+
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <h2>
+        <center>
+          Here are some extra resources to help you on your motivational journey
+        </center>
+      </h2>
+      <p>
         Need some music to jump start your motivation? Try some music to help.
         <a
           href="https://open.spotify.com/playlist/2AOW8R0mu8X8AgxI0SVvQU?si=A_KJe6-jSvCAj8XmkYTv5A"
@@ -119,51 +120,44 @@
           motivational music playlist 🎶
         </a>
       </p>
-    <p>
-      Need to take a break from the stress of everything? Try a meditation to help. 
-      <a 
-         href="https://www.youtube.com/watch?v=ZssjZnsN4Gg"
-         >
-        motivational meditation ☀️
-      </a>
-    </p>
-    <p>
-      Ready to get involved in your greater community? Try to find a volunteer opportunity. 
-      <a
-        href="https://www.volunteermatch.org"
-         >
-        volunteering near you 🚗
-      </a>
-    </p>
-    <p>
-      Ready to get out in the world with your friends? Try this to any event near you.
-      <a
-         href="https://losangeles.eventful.com/events"
-         >
-        concerts and more near you 🥳
-      </a>
-    </p>
-    <p>
-      Ready to get involved globally? Check out the 17 global goals and how you can help the world achieve these vital goals.
-      <a
-         href="https://www.globalgoals.org"   
-         >
-        the 17 global goals🌍
-      </a>
-    </p>
-    
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    
+      <p>
+        Need to take a break from the stress of everything? Try a meditation to
+        help.
+        <a href="https://www.youtube.com/watch?v=ZssjZnsN4Gg">
+          motivational meditation ☀️
+        </a>
+      </p>
+      <p>
+        Ready to get involved in your greater community? Try to find a volunteer
+        opportunity.
+        <a href="https://www.volunteermatch.org">
+          volunteering near you 🚗
+        </a>
+      </p>
+      <p>
+        Ready to get out in the world with your friends? Try this to any event
+        near you.
+        <a href="https://losangeles.eventful.com/events">
+          concerts and more near you 🥳
+        </a>
+      </p>
+      <p>
+        Ready to get involved globally? Check out the 17 global goals and how
+        you can help the world achieve these vital goals.
+        <a href="https://www.globalgoals.org">
+          the 17 global goals🌍
+        </a>
+      </p>
 
-    
+      <br />
+      <br />
+      <br />
+      <br />
     </center>
   </body>
   <footer>
     A website created for ADAHACKS II 2019
-    <br/>
-    By team Connect 
+    <br />
+    By team Connect
   </footer>
 </html>
