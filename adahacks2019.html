@@ -66,6 +66,7 @@
           length="100"
           placeholder="username"
           aria-labelledby="add-my-action!"
+       onchange="showTodos()"
         />
       <p>
         Welcome to your personal motivator! Our goal is to help you
@@ -83,19 +84,23 @@
         />
         <button type="submit" id="add-my-action" onclick="addTodo()">add my action</button>
       <br/>
-      <textarea id="completedActions" rows="20" style="position:relative; top:30px"></textarea>
+      <h2 id="errors">
+        
+      </h2>
+      <h2 id="points">
+        
+      </h2>
+      <table id="others">
+        
+      </table>
+      <textarea id="completedActions" rows="15" style="position:relative; top:30px"></textarea>
+      <br />
+      
       <section class="action">
         <ul id="action"></ul>
       </section>
       
-      <form>
-      <p>
-        <ul>
-          <a href="addaction.html">Add an Action</a>
-   
-      </ul>
-      </p>
-    </form>
+      
     <br/>
     <br/>
     <br/>
@@ -138,6 +143,19 @@
         concerts and more near you 🥳
       </a>
     </p>
+    <p>
+      Ready to get involved globally? Check out the 17 global goals and how you can help the world achieve these vital goals.
+      <a
+         href="https://www.globalgoals.org"   
+         >
+        the 17 global goals🌍
+      </a>
+    </p>
+    
+    <br/>
+    <br/>
+    <br/>
+    <br/>
     
 
     
